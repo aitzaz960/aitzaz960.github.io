@@ -1,0 +1,22 @@
+/* ==========================================================
+   REVEAL, REDUCED MOTION & PRINT
+   ========================================================== */
+.rv{opacity:0;transform:translateY(16px)}
+.rv.in{opacity:1;transform:none;transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--i,0)*70ms)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .rv{opacity:1;transform:none}
+  .hero__name .ln>span{transform:none}
+  .trace .hop__bar{transform:scaleX(1)}
+}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+section[id]{scroll-margin-top:74px}
+@media (min-width:1100px){section[id]{scroll-margin-top:24px}}
+
+@media print{
+  .spine,.topbar,.themebtn{display:none}
+  .shell{padding-left:0}
+  body{background:#fff;color:#000}
+}

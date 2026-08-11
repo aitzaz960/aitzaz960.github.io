@@ -1,0 +1,81 @@
+/* ==========================================================
+   DESIGN TOKENS
+   ========================================================== */
+:root{
+  --paper:#E7EAE4;
+  --surface:#F3F5F1;
+  --surface-2:#FBFCFA;
+  --ink:#0F1A20;
+  --ink-2:#4C5D66;
+  --ink-3:#7C8C94;
+  --line:rgba(15,26,32,.14);
+  --line-soft:rgba(15,26,32,.07);
+  --signal:#B85800;
+  --signal-bright:#E8850C;
+  --healthy:#0D6E67;
+  --shadow:0 1px 0 rgba(15,26,32,.05), 0 18px 40px -28px rgba(15,26,32,.45);
+  --grid:rgba(15,26,32,.045);
+}
+[data-theme="night"]{
+  --paper:#0B1015;
+  --surface:#121A20;
+  --surface-2:#18222A;
+  --ink:#E7ECE8;
+  --ink-2:#94A6B0;
+  --ink-3:#6E828D;
+  --line:rgba(231,236,232,.16);
+  --line-soft:rgba(231,236,232,.08);
+  --signal:#F5A623;
+  --signal-bright:#FFBB4D;
+  --healthy:#35C2AC;
+  --shadow:0 1px 0 rgba(0,0,0,.4), 0 24px 50px -30px rgba(0,0,0,.9);
+  --grid:rgba(231,236,232,.05);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Newsreader",Georgia,serif;
+  font-size:17px;
+  line-height:1.65;
+  font-optical-sizing:auto;
+  -webkit-font-smoothing:antialiased;
+  transition:background .5s ease,color .5s ease;
+  overflow-x:hidden;
+}
+/* faint graph-paper ground — the instrument motif */
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(120% 90% at 50% 0%,#000 20%,transparent 78%);
+  -webkit-mask-image:radial-gradient(120% 90% at 50% 0%,#000 20%,transparent 78%);
+}
+img{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--signal-bright);outline-offset:3px;border-radius:2px}
+
+/* ==========================================================
+   TYPE ROLES
+   ========================================================== */
+.display{
+  font-family:"Archivo",system-ui,sans-serif;
+  font-variation-settings:"wdth" 112,"wght" 800;
+  text-transform:uppercase;
+  letter-spacing:-.018em;
+  line-height:.92;
+  margin:0;
+}
+.mono{
+  font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:11.5px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  font-weight:500;
+}
+.prose{max-width:62ch}
+.prose p{margin:0 0 1em}
+em{font-style:italic}

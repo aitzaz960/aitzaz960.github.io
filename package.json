@@ -1,0 +1,42 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Portfolio site for Aitzaz Ahmad - senior full stack engineer. React + Vite, three design directions over one content model.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react": "^7.37.3",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "globals": "^15.14.0",
+    "jsdom": "^25.0.1",
+    "vite": "^6.0.7",
+    "vitest": "^2.1.9"
+  },
+  "author": "Aitzaz Ahmad <aitzazahmadofficial@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://aitzaz960.github.io/portfolio/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aitzaz960/portfolio.git"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
