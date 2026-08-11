@@ -5,7 +5,7 @@ Portfolio site for **Aitzaz Ahmad** — senior full stack engineer, Islamabad.
 React + Vite. No UI kit, no CSS framework, no component library — every
 element is written for this project.
 
-[**Live site**](https://aitzaz960.github.io/portfolio/)
+[**Live site**](https://aitzaz960.github.io/)
 
 ---
 
